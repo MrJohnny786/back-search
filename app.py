@@ -10,6 +10,9 @@ from helpers.methods import (
     convert_to_dict,
 )
 from flask_cors import CORS
+import os
+
+port = int(os.environ.get("PORT", 5000))
 
 
 sys.path.append("/helpers")
@@ -120,5 +123,5 @@ def search_data():
 
 
 if __name__ == "__main__":
-    app.run(debug=app.config["DEBUG"])
+    app.run(host="0.0.0.0", port=port, debug=app.config["DEBUG"])
 # flake8: noqa

@@ -1,9 +1,11 @@
 import sys
 import re
 
+sys.path.append("/helpers")
+
 from flask import Flask, jsonify, request
 from pymongo import MongoClient
-from helpers.methods import (
+from methods import (
     toStrings,
     sanitizeName,
     sanitizePageAndLimit,
@@ -16,7 +18,7 @@ import os
 port = int(os.environ.get("PORT", 5000))
 
 
-sys.path.append("/helpers")
+# sys.path.append("/helpers")
 
 
 app = Flask(__name__)

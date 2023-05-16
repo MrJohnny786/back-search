@@ -123,6 +123,6 @@ def search_data():
     )
 
 
-# if __name__ == "__main__":
-#     app.run(host="0.0.0.0", port=port, debug=app.config["DEBUG"])
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=port, debug=app.config["DEBUG"])
 # flake8: noqa

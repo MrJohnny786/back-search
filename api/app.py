@@ -37,6 +37,11 @@ except Exception as e:
     raise Exception("Error connecting to the database: ", e)
 
 
+@app.route("/")
+def home():
+    return "Home Page Route"
+
+
 # Route to search for data by name
 @app.route("/api/data/search", methods=["POST"])
 def search_data():
